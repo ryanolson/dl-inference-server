@@ -28,9 +28,9 @@ syntax = "proto3";
 
 package nvidia.inferenceserver;
 
-import "src/core/api.proto";
-import "src/core/request_status.proto";
-import "src/core/server_status.proto";
+import "api.proto";
+import "request_status.proto";
+import "server_status.proto";
 
 service GRPCService {
   // Get server or model status

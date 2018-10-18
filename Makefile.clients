@@ -151,7 +151,6 @@ $(GRPC_OBJS): $(GRPC_SRCS) $(GRPC_HDRS)
 $(BUILDDIR)/$(SRCDIR)/%.proto: $(SRCDIR)/%.proto
 	mkdir -p $(dir $@)
 	cp $< $@
-	sed -i -e 's/src\/core\///' $@
 
 $(BUILDDIR)/$(SRCDIR)/%.pb.cc $(BUILDDIR)/$(SRCDIR)/%.pb.h \
     $(BUILDDIR)/$(SRCDIR)/%_pb2.py: $(BUILDDIR)/$(SRCDIR)/%.proto $(LIBGRPCDIR)/libgrpc_indicator
